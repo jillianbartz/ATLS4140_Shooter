@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1725999497
+icon.svg::CompressedTexture2D::9094897157682920779::1725999412::1725999498::1::::<><>::
+main.tscn::PackedScene::689916307362782272::1725999412::0::1::::<><>::
+projectile.gd::GDScript::-1::1725999412::0::1::::<>Area2D<>::
+::res://actors/::1725999412
+::res://actors/player/::1725999412
+player.gd::GDScript::-1::1725999412::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::510766487269126745::1725999412::0::1::::<><>::res://actors/player/player.gd<>uid://cdey6bbvgbrld::::res://actors/projectile/projectile.tscn
+::res://actors/projectile/::1725999412
+projectile.tscn::PackedScene::4993178031784361093::1725999412::0::1::::<><>::res://projectile.gd
