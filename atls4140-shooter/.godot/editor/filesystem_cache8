@@ -1,11 +1,20 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1725999497
+::res://::1726169273
 icon.svg::CompressedTexture2D::9094897157682920779::1725999412::1725999498::1::::<><>::
 main.tscn::PackedScene::689916307362782272::1725999412::0::1::::<><>::
 projectile.gd::GDScript::-1::1725999412::0::1::::<>Area2D<>::
 ::res://actors/::1725999412
-::res://actors/player/::1725999412
+::res://actors/player/::1726167870
 player.gd::GDScript::-1::1725999412::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::510766487269126745::1725999412::0::1::::<><>::res://actors/player/player.gd<>uid://cdey6bbvgbrld::::res://actors/projectile/projectile.tscn
+player.tscn::PackedScene::510766487269126745::1726167870::0::1::::<><>::res://actors/player/player.gd<>uid://cdey6bbvgbrld::::res://actors/projectile/projectile.tscn
 ::res://actors/projectile/::1725999412
 projectile.tscn::PackedScene::4993178031784361093::1725999412::0::1::::<><>::res://projectile.gd
+::res://Forest BETA V3/::1726169273
+Forest Cliff.png::CompressedTexture2D::1986587008858684588::1726169273::1726169273::1::::<><>::
+Forest Props.png::CompressedTexture2D::2511197604777723386::1726169273::1726169273::1::::<><>::
+Forest Structures.png::CompressedTexture2D::4466766083823727803::1726169273::1726169273::1::::<><>::
+Forest Tilesett.png::CompressedTexture2D::3304831030941313856::1726169273::1726169273::1::::<><>::
+Sample.png::CompressedTexture2D::1283630094363118925::1726169273::1726169273::1::::<><>::
+Settlement.png::CompressedTexture2D::7589607456592161516::1726169273::1726169273::1::::<><>::
+Trees.png::CompressedTexture2D::5796235734512018393::1726169273::1726169273::1::::<><>::
+Water Tileset.png::CompressedTexture2D::14830804174665325::1726169273::1726169273::1::::<><>::

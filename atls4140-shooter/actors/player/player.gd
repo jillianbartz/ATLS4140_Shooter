@@ -3,6 +3,8 @@ extends CharacterBody2D
 @export var projectile_scene: Resource
 @export var move_speed: float = 200.0
 
+var timeToaddDestination: float
+
 func _input(event):
 	if (event is InputEventMouseButton):
 		# Only shoot on left click pressed down
@@ -22,3 +24,7 @@ func _physics_process(delta):
 		"move_up", \
 		"move_down") * move_speed
 	move_and_slide()
+
+func _process(delta):
+	if(Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)):
+		print("press")

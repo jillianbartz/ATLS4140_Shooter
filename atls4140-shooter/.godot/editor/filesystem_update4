@@ -1,1 +1,3 @@
+res://main.tscn
 res://actors/player/player.tscn
+res://actors/player/player.gd
