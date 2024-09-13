@@ -1,3 +1,5 @@
-res://main.tscn
 res://actors/player/player.tscn
+res://main.tscn
 res://actors/player/player.gd
+res://projectile.gd
+res://progress_bar.gd

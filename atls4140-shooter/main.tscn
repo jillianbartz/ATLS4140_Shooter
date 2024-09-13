@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://j3g253drsxc7"]
+[gd_scene load_steps=27 format=4 uid="uid://j3g253drsxc7"]
 
 [ext_resource type="Texture2D" uid="uid://sj2g2li20vjp" path="res://Forest BETA V3/Sample.png" id="1_o7cry"]
 [ext_resource type="Texture2D" uid="uid://3kk2eiobu0cu" path="res://Forest BETA V3/Forest Cliff.png" id="2_4g2u0"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://hjoiqli2jugf" path="res://actors/player/player.tscn" id="4_r3r8r"]
 [ext_resource type="Texture2D" uid="uid://dgepyxg6guyue" path="res://Forest BETA V3/Settlement.png" id="7_dxasj"]
 [ext_resource type="Texture2D" uid="uid://cot0fj85tj7gv" path="res://Forest BETA V3/Trees.png" id="8_ecc4j"]
+[ext_resource type="Script" path="res://progress_bar.gd" id="10_5dxb8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dtu5j"]
 texture = ExtResource("2_4g2u0")
@@ -9216,3 +9217,15 @@ tile_set = SubResource("TileSet_sgcja")
 z_index = 1
 position = Vector2(501, 231)
 collision_mask = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 17.0
+offset_top = 18.0
+offset_right = 214.0
+offset_bottom = 45.0
+max_value = 1.7
+value = 1.7
+show_percentage = false
+script = ExtResource("10_5dxb8")
+
+[connection signal="stamina_empty" from="ProgressBar" to="Player2" method="_on_progress_bar_stamina_empty"]
