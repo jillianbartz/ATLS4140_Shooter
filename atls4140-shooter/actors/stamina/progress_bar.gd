@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 	if(dash):
 		if(value <= 0):
 			stamina_empty.emit(false)
-			await get_tree().create_timer(5).timeout
+			await get_tree().create_timer(3).timeout
 			canRegen = true
 		else:
 			canRegen = false

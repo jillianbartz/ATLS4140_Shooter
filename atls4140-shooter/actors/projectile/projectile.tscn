@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cdey6bbvgbrld"]
 
-[ext_resource type="Script" path="res://projectile.gd" id="1_8bvg4"]
+[ext_resource type="Script" path="res://actors/projectile/projectile.gd" id="1_8bvg4"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_1025v"]
 
@@ -11,6 +11,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_40hxe"]
 
 [node name="Projectile" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_8bvg4")
 
 [node name="MainSprite" type="Sprite2D" parent="."]
@@ -33,4 +35,5 @@ shape = SubResource("CircleShape2D_40hxe")
 [node name="TimeToLive" type="Timer" parent="."]
 autostart = true
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="TimeToLive" to="." method="_on_time_to_live_timeout"]

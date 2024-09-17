@@ -1,5 +1,9 @@
+CollisionShape2D
+Area2D
+Node
+Node2D
+Sprite2D
+CharacterBody2D
 ProgressBar
 TileMapLayer
-Node2D
 TileMap
-CharacterBody2D

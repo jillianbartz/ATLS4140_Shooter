@@ -50,9 +50,7 @@ func _physics_process(delta):
 
 func _on_progress_bar_stamina_empty(value: Variant) -> void:
 	if(!value):
-		print("false")
 		sprint = false
 	
 	if(value):
 		sprint = true
-		print("true")
