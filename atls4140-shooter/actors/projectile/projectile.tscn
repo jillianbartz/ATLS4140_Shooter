@@ -11,7 +11,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_40hxe"]
 
 [node name="Projectile" type="Area2D"]
-collision_layer = 4
+z_index = 4
+scale = Vector2(0.551104, 0.571548)
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_8bvg4")
 

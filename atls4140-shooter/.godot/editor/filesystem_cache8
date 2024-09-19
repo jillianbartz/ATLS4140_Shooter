@@ -1,18 +1,21 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1726600656
+::res://::1726765419
 icon.svg::CompressedTexture2D::9094897157682920779::1725999412::1725999498::1::::<><>::
-main.tscn::PackedScene::689916307362782272::1726600715::0::1::::<><>::uid://sj2g2li20vjp::::res://Forest BETA V3/Sample.png<>uid://3kk2eiobu0cu::::res://Forest BETA V3/Forest Cliff.png<>uid://bnc5c4m460vxg::::res://Forest BETA V3/Forest Tilesett.png<>uid://bb1pb7wjklpiw::::res://Forest BETA V3/Forest Props.png<>uid://hgi46lq4gcj::::res://Forest BETA V3/Water Tileset.png<>uid://b4vy8qoq4pbhb::::res://Forest BETA V3/Forest Structures.png<>uid://hjoiqli2jugf::::res://actors/player/player.tscn<>uid://dgepyxg6guyue::::res://Forest BETA V3/Settlement.png<>uid://cot0fj85tj7gv::::res://Forest BETA V3/Trees.png<>res://progress_bar.gd
-progress_bar.gd::GDScript::-1::1726249523::0::1::::<>ProgressBar<>::
+main.tscn::PackedScene::689916307362782272::1726765396::0::1::::<><>::uid://sj2g2li20vjp::::res://Forest BETA V3/Sample.png<>uid://3kk2eiobu0cu::::res://Forest BETA V3/Forest Cliff.png<>uid://bnc5c4m460vxg::::res://Forest BETA V3/Forest Tilesett.png<>uid://bb1pb7wjklpiw::::res://Forest BETA V3/Forest Props.png<>uid://hgi46lq4gcj::::res://Forest BETA V3/Water Tileset.png<>uid://b4vy8qoq4pbhb::::res://Forest BETA V3/Forest Structures.png<>uid://hjoiqli2jugf::::res://actors/player/player.tscn<>uid://dgepyxg6guyue::::res://Forest BETA V3/Settlement.png<>uid://cot0fj85tj7gv::::res://Forest BETA V3/Trees.png<>res://actors/stamina/progress_bar.gd<>uid://d4jlii4uunvpa::::res://actors/enemies/basic_enemy.tscn
 ::res://actors/::1726600711
-::res://actors/enemies/::1726600611
-basic_enemy.tscn::PackedScene::9214000555562550714::1726600611::0::1::::<><>::
-::res://actors/player/::1726599507
+::res://actors/enemies/::1726765126
+basic_enemy.gd::GDScript::-1::1726605696::0::1::::Enemy<>CharacterStateMachine<>::
+basic_enemy.tscn::PackedScene::9214000555562550714::1726765126::0::1::::<><>::res://actors/enemies/basic_enemy.gd<>res://actors/enemies/idle.gd<>res://actors/enemies/chasing.gd
+chasing.gd::GDScript::-1::1726603449::0::1::::<>State<>::
+idle.gd::GDScript::-1::1726603455::0::1::::<>State<>::
+::res://actors/player/::1726765126
 player.gd::GDScript::-1::1726249532::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::510766487269126745::1726599507::0::1::::<><>::res://actors/player/player.gd<>uid://cdey6bbvgbrld::::res://actors/projectile/projectile.tscn
-::res://actors/projectile/::1726600656
-projectile.gd::GDScript::-1::1726246222::0::1::::<>Area2D<>::
-projectile.tscn::PackedScene::4993178031784361093::1726600656::0::1::::<><>::res://actors/projectile/projectile.gd
-::res://actors/stamina/::1726600711
+player.tscn::PackedScene::510766487269126745::1726765126::0::1::::<><>::res://actors/player/player.gd<>uid://cdey6bbvgbrld::::res://actors/projectile/projectile.tscn
+::res://actors/projectile/::1726765126
+projectile.gd::GDScript::-1::1726605545::0::1::::<>Area2D<>::
+projectile.tscn::PackedScene::4993178031784361093::1726765126::0::1::::<><>::res://actors/projectile/projectile.gd
+::res://actors/stamina/::1726600715
+progress_bar.gd::GDScript::-1::1726249523::0::1::::<>ProgressBar<>::
 ::res://Forest BETA V3/::1726169273
 Forest Cliff.png::CompressedTexture2D::1986587008858684588::1726169273::1726169273::1::::<><>::
 Forest Props.png::CompressedTexture2D::2511197604777723386::1726169273::1726169273::1::::<><>::
@@ -22,6 +25,6 @@ Sample.png::CompressedTexture2D::1283630094363118925::1726169273::1726169273::1:
 Settlement.png::CompressedTexture2D::7589607456592161516::1726169273::1726169273::1::::<><>::
 Trees.png::CompressedTexture2D::5796235734512018393::1726169273::1726169273::1::::<><>::
 Water Tileset.png::CompressedTexture2D::14830804174665325::1726169273::1726169273::1::::<><>::
-::res://shared_scripts/::1726600694
-character_state_machine.gd::GDScript::-1::1726600686::0::1::::<>Node<>::
-state.gd::GDScript::-1::1726600694::0::1::::<>Node<>::
+::res://shared_scripts/::1726605678
+character_state_machine.gd::GDScript::-1::1726605678::0::1::::CharacterStateMachine<>CharacterBody2D<>::
+state.gd::GDScript::-1::1726605678::0::1::::State<>Node<>::

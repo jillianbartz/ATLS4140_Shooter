@@ -1,10 +1,4 @@
-res://actors/player/player.tscn
 res://main.tscn
+res://actors/player/player.tscn
 res://actors/enemies/basic_enemy.tscn
-res://shared_scripts/character_state_machine.gd
-res://shared_scripts/state.gd
-res://actors/enemies/basic_enemy.gd
-res://actors/enemies/idle.gd
-res://actors/enemies/chasing.gd
-res://actors/projectile/projectile.gd
 res://actors/projectile/projectile.tscn
