@@ -15,7 +15,7 @@ func _input(event):
 			hold = true
 			var new_projectile = projectile_scene.instantiate()
 			get_parent().add_child(new_projectile)
-			var projectile_forward = Vector2.from_angle(rotation)
+			var projectile_forward = position.direction_to(get_global_mouse_position())
 			new_projectile.fire(projectile_forward, 1000.0)
 			new_projectile.position = $ProjectileRefPoint.global_position
 		if(event.is_released()):
@@ -28,13 +28,13 @@ func _process(delta):
 			await get_tree().create_timer(.3).timeout
 			var new_projectile = projectile_scene.instantiate()
 			get_parent().add_child(new_projectile)
-			var projectile_forward = Vector2.from_angle(rotation)
+			var projectile_forward = position.direction_to(get_global_mouse_position())
 			new_projectile.fire(projectile_forward, 3000.0)
 			new_projectile.position = $ProjectileRefPoint.global_position
 			hold = false
 
 func _physics_process(delta):
-	look_at(get_viewport().get_mouse_position())
+	#look_at(get_viewport().get_mouse_position())
 	
 	velocity = Input.get_vector("move_left", \
 		"move_right", \
@@ -46,6 +46,19 @@ func _physics_process(delta):
 	else:
 		velocity = newSprint
 	move_and_slide()
+	
+	var angle = rad_to_deg(velocity.angle()) + 180
+	if(velocity.length() < 10):
+		$AnimationPlayer.play("idle")
+	else:
+		if(angle > 135 and angle < 255):
+			$AnimationPlayer.play("move_right")
+		elif(angle > 225 and angle < 315):
+			$AnimationPlayer.play("move_front")
+		elif(angle > 315 or angle < 45):
+			$AnimationPlayer.play("move_left")
+		elif(angle > 45 and angle < 135):
+			$AnimationPlayer.play("move_back")
 
 
 func _on_progress_bar_stamina_empty(value: Variant) -> void:

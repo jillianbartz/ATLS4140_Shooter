@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnc5c4m460vxg"
-path="res://.godot/imported/Forest Tilesett.png-2d0a52008ed47f4dd088716da6ea5ea8.ctex"
+uid="uid://dow1if3lylc50"
+path="res://.godot/imported/calicoKitty_sleepyIdleBreaker.png-0a6cf25888dc25f8ff16ea1ef6d105e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Forest BETA V3/Forest Tilesett.png"
-dest_files=["res://.godot/imported/Forest Tilesett.png-2d0a52008ed47f4dd088716da6ea5ea8.ctex"]
+source_file="res://calicoKitty_sleepyIdleBreaker.png"
+dest_files=["res://.godot/imported/calicoKitty_sleepyIdleBreaker.png-0a6cf25888dc25f8ff16ea1ef6d105e5.ctex"]
 
 [params]
 

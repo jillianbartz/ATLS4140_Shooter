@@ -2,3 +2,4 @@ res://main.tscn
 res://actors/player/player.tscn
 res://actors/enemies/basic_enemy.tscn
 res://actors/projectile/projectile.tscn
+res://actors/player/player.gd
