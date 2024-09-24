@@ -17,7 +17,7 @@ func _input(event):
 			get_parent().add_child(new_projectile)
 			var projectile_forward = position.direction_to(get_global_mouse_position())
 			new_projectile.fire(projectile_forward, 1000.0)
-			new_projectile.position = $ProjectileRefPoint.global_position
+			new_projectile.position = $Weapon/ProjectileRefPoint.global_position
 		if(event.is_released()):
 			hold = false
 
@@ -30,11 +30,14 @@ func _process(delta):
 			get_parent().add_child(new_projectile)
 			var projectile_forward = position.direction_to(get_global_mouse_position())
 			new_projectile.fire(projectile_forward, 3000.0)
-			new_projectile.position = $ProjectileRefPoint.global_position
+			new_projectile.position = $Weapon/ProjectileRefPoint.global_position
 			hold = false
 
 func _physics_process(delta):
 	#look_at(get_viewport().get_mouse_position())
+	
+	$Weapon.rotation = position.direction_to(get_global_mouse_position()).angle()
+	$Weapon/Sprite2D.flip_v = ($Weapon.rotation < -PI/2 or $Weapon.rotation > PI/2)
 	
 	velocity = Input.get_vector("move_left", \
 		"move_right", \

@@ -3,3 +3,5 @@ res://actors/player/player.tscn
 res://actors/enemies/basic_enemy.tscn
 res://actors/projectile/projectile.tscn
 res://actors/player/player.gd
+res://actors/enemies/basic_enemy.gd
+res://actors/enemies/idle.gd

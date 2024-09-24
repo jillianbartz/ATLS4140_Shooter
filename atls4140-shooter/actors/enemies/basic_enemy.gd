@@ -5,5 +5,6 @@ class_name Enemy
 
 func hit(damage_number: int):
 	hp -= damage_number
+
 	if(hp <= 0):
 		queue_free()
