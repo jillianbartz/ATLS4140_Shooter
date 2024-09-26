@@ -1,11 +1,16 @@
 extends CharacterBody2D
+class_name Player
 
 @export var projectile_scene: Resource
 @export var move_speed: float = 200.0
+@export var hp: int = 10
 
 var hold: bool = false
 var holdAmount: float = 0.0
 var sprint: bool = false
+var health: int = 10
+
+@onready var enemy = get_node("/root/Main/BasicEnemy")
 
 func _input(event):
 	if (event is InputEventMouseButton):
@@ -34,7 +39,6 @@ func _process(delta):
 			hold = false
 
 func _physics_process(delta):
-	#look_at(get_viewport().get_mouse_position())
 	
 	$Weapon.rotation = position.direction_to(get_global_mouse_position()).angle()
 	$Weapon/Sprite2D.flip_v = ($Weapon.rotation < -PI/2 or $Weapon.rotation > PI/2)
@@ -70,3 +74,11 @@ func _on_progress_bar_stamina_empty(value: Variant) -> void:
 	
 	if(value):
 		sprint = true
+
+func _ready():
+	enemy.connect("enemy1_hit", Callable(self, "_on_enemy1_hit"))
+
+
+func _on_enemy1_hit(damage: int) -> void:
+	health -= damage
+	$HealthBar.value = health

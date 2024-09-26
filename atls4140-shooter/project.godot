@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="viewport"
 
+[global_group]
+
+enemy=""
+player=""
+
 [input]
 
 move_left={
