@@ -10,7 +10,9 @@ var holdAmount: float = 0.0
 var sprint: bool = false
 var health: int = 10
 
-@onready var enemy = get_node("/root/Main/BasicEnemy")
+@onready var enemy1 = get_node("/root/Main/BasicEnemy")
+@onready var enemy2 = get_node("/root/Main/BasicEnemy")
+
 
 func _input(event):
 	if (event is InputEventMouseButton):
@@ -76,7 +78,9 @@ func _on_progress_bar_stamina_empty(value: Variant) -> void:
 		sprint = true
 
 func _ready():
-	enemy.connect("enemy1_hit", Callable(self, "_on_enemy1_hit"))
+	enemy1.connect("enemy1_hit", Callable(self, "_on_enemy1_hit"))
+	enemy2.connect("enemy2_hit", Callable(self, "_on_enemy2_hit"))
+	
 
 
 func _on_enemy1_hit(damage: int) -> void:

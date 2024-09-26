@@ -11,7 +11,6 @@ func _ready():
 		if (child is State):
 			all_state.append(child)
 			child.change_state.connect(on_change_state)
-			
 			child.body = self
 			child.initialize()
 		else:

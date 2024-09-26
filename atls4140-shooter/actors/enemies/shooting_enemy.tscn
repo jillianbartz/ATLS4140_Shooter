@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://d4jlii4uunvpa"]
+[gd_scene load_steps=15 format=3 uid="uid://80hu430esg3q"]
 
-[ext_resource type="Script" path="res://actors/enemies/basic_enemy.gd" id="1_usmyc"]
-[ext_resource type="Script" path="res://actors/enemies/idle.gd" id="2_fyrit"]
-[ext_resource type="Texture2D" uid="uid://ciywgwjhw0jp5" path="res://Cacodaemon Sprite Sheet.png" id="2_ridn1"]
-[ext_resource type="Script" path="res://actors/enemies/chasing.gd" id="3_l8nax"]
+[ext_resource type="Script" path="res://actors/enemies/shooting_enemy.gd" id="1_im3yn"]
+[ext_resource type="Texture2D" uid="uid://ciywgwjhw0jp5" path="res://Cacodaemon Sprite Sheet.png" id="2_p7n8s"]
+[ext_resource type="Script" path="res://actors/enemies/idle_shoot.gd" id="3_0wdhf"]
+[ext_resource type="Script" path="res://actors/enemies/shooting.gd" id="4_ccpkd"]
+[ext_resource type="PackedScene" uid="uid://ccndujur71k1a" path="res://actors/projectile/enemy_projectile.tscn" id="6_cbkr2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rrq2l"]
 size = Vector2(47, 42)
@@ -20,7 +21,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_ridn1")]
+"values": [ExtResource("2_p7n8s")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -72,7 +73,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_ridn1")]
+"values": [ExtResource("2_p7n8s")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -124,7 +125,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_ridn1")]
+"values": [ExtResource("2_p7n8s")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -176,7 +177,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_ridn1")]
+"values": [ExtResource("2_p7n8s")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -229,7 +230,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_ridn1")]
+"values": [ExtResource("2_p7n8s")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -282,7 +283,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_ridn1")]
+"values": [ExtResource("2_p7n8s")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -334,18 +335,20 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ub5o"]
 radius = 43.0116
 
-[node name="BasicEnemy" type="CharacterBody2D" node_paths=PackedStringArray("initial_state")]
+[node name="ShootingEnemy" type="CharacterBody2D" node_paths=PackedStringArray("initial_state")]
+scale = Vector2(0.926681, 1.00669)
 collision_layer = 2
 collision_mask = 2
-script = ExtResource("1_usmyc")
-initial_state = NodePath("States/Idle")
+script = ExtResource("1_im3yn")
+projectile_scene = ExtResource("6_cbkr2")
+initial_state = NodePath("States/IdleShoot")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, 5)
 shape = SubResource("RectangleShape2D_rrq2l")
 
 [node name="MainSprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_ridn1")
+texture = ExtResource("2_p7n8s")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -354,25 +357,25 @@ libraries = {
 
 [node name="States" type="Node" parent="."]
 
-[node name="Idle" type="Node" parent="States"]
-script = ExtResource("2_fyrit")
+[node name="IdleShoot" type="Node" parent="States"]
+script = ExtResource("3_0wdhf")
 
-[node name="Chasing" type="Node" parent="States"]
-script = ExtResource("3_l8nax")
-
-[node name="Area2D" type="Area2D" parent="." groups=["enemy"]]
-
-[node name="CollisionHit" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(2.5, 5)
-shape = SubResource("RectangleShape2D_rrq2l")
+[node name="Shooting" type="Node" parent="States"]
+script = ExtResource("4_ccpkd")
 
 [node name="DetectionRange" type="Area2D" parent="." groups=["enemy"]]
+scale = Vector2(1.73903, 1.71361)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionRange"]
 scale = Vector2(2.57897, 2.52861)
 shape = SubResource("CircleShape2D_2ub5o")
 
+[node name="EnemyProjectile" parent="." instance=ExtResource("6_cbkr2")]
+
+[node name="WaitShoot" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="start_shoot" from="States/Shooting" to="." method="_on_shooting_start_shoot"]

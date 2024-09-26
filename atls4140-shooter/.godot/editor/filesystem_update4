@@ -1,10 +1,13 @@
+res://actors/enemies/shooting_enemy.tscn
 res://main.tscn
 res://actors/player/player.tscn
 res://actors/enemies/basic_enemy.tscn
 res://actors/projectile/projectile.tscn
+res://actors/enemies/shooting.gd
+res://actors/enemies/idle_shoot.gd
 res://actors/enemies/basic_enemy.gd
+res://actors/enemies/shooting_enemy.gd
 res://actors/player/player.gd
 res://actors/projectile/projectile.gd
-res://actors/enemies/idle.gd
-res://actors/enemies/chasing.gd
-res://health_bar.gd
+res://actors/projectile/enemy_projectile.tscn
+res://actors/projectile/enemy_projectile.gd

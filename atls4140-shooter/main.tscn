@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://j3g253drsxc7"]
+[gd_scene load_steps=42 format=4 uid="uid://j3g253drsxc7"]
 
 [ext_resource type="Texture2D" uid="uid://sj2g2li20vjp" path="res://assets/Sample.png" id="1_o7cry"]
 [ext_resource type="Texture2D" uid="uid://3kk2eiobu0cu" path="res://assets/Forest Cliff.png" id="2_4g2u0"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cot0fj85tj7gv" path="res://assets/Trees.png" id="8_ecc4j"]
 [ext_resource type="Script" path="res://actors/stamina/progress_bar.gd" id="10_5dxb8"]
 [ext_resource type="PackedScene" uid="uid://d4jlii4uunvpa" path="res://actors/enemies/basic_enemy.tscn" id="11_k1sd6"]
+[ext_resource type="PackedScene" uid="uid://80hu430esg3q" path="res://actors/enemies/shooting_enemy.tscn" id="12_huqym"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dtu5j"]
 texture = ExtResource("2_4g2u0")
@@ -24333,5 +24334,8 @@ script = ExtResource("10_5dxb8")
 [node name="BasicEnemy" parent="." instance=ExtResource("11_k1sd6")]
 z_index = 3
 position = Vector2(804.904, 235.725)
+
+[node name="ShootingEnemy" parent="." instance=ExtResource("12_huqym")]
+position = Vector2(296.961, 406.872)
 
 [connection signal="stamina_empty" from="Player2/Camera2D/StaminaBar" to="Player2" method="_on_progress_bar_stamina_empty"]
