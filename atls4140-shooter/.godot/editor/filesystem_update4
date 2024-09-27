@@ -7,3 +7,5 @@ res://actors/enemies/basic_enemy.tscn
 res://actors/player/player.gd
 res://actors/enemies/shooting_enemy.gd
 res://actors/enemies/shooting.gd
+res://actors/projectile/enemy_projectile.gd
+res://actors/enemies/idle_shoot.gd

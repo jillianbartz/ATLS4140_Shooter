@@ -15,7 +15,5 @@ func _on_time_to_live_timeout():
 	queue_free()
 
 func _on_body_entered(body: Node2D) -> void:
-	print(body)
-	if(body == Player):
-		(body as Player)._on_enemy1_hit(1)
+	(body as Player)._on_enemy1_hit(1)
 	queue_free()

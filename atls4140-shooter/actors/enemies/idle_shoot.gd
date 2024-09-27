@@ -20,5 +20,4 @@ func process_state(delta: float):
 		shooting_state.target = (potential_targets[0] as CharacterBody2D)
 		change_state.emit(shooting_state)
 	else:
-		print("?")
 		change_state.emit(idle_state)

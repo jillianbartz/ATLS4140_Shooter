@@ -79,6 +79,7 @@ func _on_progress_bar_stamina_empty(value: Variant) -> void:
 
 func _ready():
 	enemy1.connect("enemy1_hit", Callable(self, "_on_enemy1_hit"))
+	enemy2.connect("enemy2_hit", Callable(self, "_on_enemy2_hit"))
 	
 
 
