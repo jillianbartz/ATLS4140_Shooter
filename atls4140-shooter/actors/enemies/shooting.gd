@@ -17,4 +17,3 @@ func process_state(delta: float):
 		change_state.emit(idle_state)
 	else:
 		start_shoot.emit(true)
-		

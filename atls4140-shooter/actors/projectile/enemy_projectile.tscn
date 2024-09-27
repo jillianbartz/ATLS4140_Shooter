@@ -1,34 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccndujur71k1a"]
+[gd_scene load_steps=4 format=3 uid="uid://ccndujur71k1a"]
 
 [ext_resource type="Script" path="res://actors/projectile/enemy_projectile.gd" id="1_y37lk"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_1025v"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_17v1b"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_txavx"]
+[ext_resource type="Texture2D" uid="uid://cqnd84v1ju46i" path="res://actors/projectile/Enemy_proj.png" id="2_04lir"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_40hxe"]
 
 [node name="EnemyProjectile" type="Area2D"]
 z_index = 4
-scale = Vector2(-0.509353, 0.539726)
+scale = Vector2(-0.808692, 0.882847)
 collision_layer = 0
 script = ExtResource("1_y37lk")
 
 [node name="MainSprite" type="Sprite2D" parent="."]
-scale = Vector2(20, 20)
-texture = SubResource("CanvasTexture_1025v")
-
-[node name="Sprite2D" type="Sprite2D" parent="MainSprite"]
-position = Vector2(-0.75, 0)
-scale = Vector2(0.5, 0.5)
-texture = SubResource("CanvasTexture_17v1b")
-
-[node name="Sprite2D2" type="Sprite2D" parent="MainSprite"]
-position = Vector2(-1.1, 0)
-scale = Vector2(0.2, 0.2)
-texture = SubResource("CanvasTexture_txavx")
+position = Vector2(1.96328, 1.85279)
+scale = Vector2(0.665586, 0.537404)
+texture = ExtResource("2_04lir")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_40hxe")

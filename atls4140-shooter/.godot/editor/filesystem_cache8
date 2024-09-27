@@ -1,29 +1,35 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1727387538
+::res://::1727399518
 Cacodaemon Sprite Sheet.png::CompressedTexture2D::5385244840957571208::1727208092::1727208093::1::::<><>::
+Cacodaemon_Sprite_Sheet_prple.png::CompressedTexture2D::2744069486337910693::1727399463::1727399464::1::::<><>::
 calicoKitty_curiousIdleBreaker.png::CompressedTexture2D::5695376798851672501::1726776552::1726778914::1::::<><>::
 calicoKitty_sleepyIdleBreaker.png::CompressedTexture2D::8188915407167810645::1726776552::1726778914::1::::<><>::
 calicoKitty_walk.png::CompressedTexture2D::7899486154508858662::1726776552::1726778914::1::::<><>::
 fantasy_epicweapons_pack1_nobg.png::CompressedTexture2D::4996449368929152283::1727207291::1727207296::1::::<><>::
 health_bar.gd::GDScript::-1::1727380562::0::1::::<>ProgressBar<>::
 icon.svg::CompressedTexture2D::9094897157682920779::1725999412::1725999498::1::::<><>::
-main.tscn::PackedScene::689916307362782272::1727387502::0::1::::<><>::uid://sj2g2li20vjp::::res://assets/Sample.png<>uid://3kk2eiobu0cu::::res://assets/Forest Cliff.png<>uid://bnc5c4m460vxg::::res://assets/Forest Tilesett.png<>uid://bb1pb7wjklpiw::::res://assets/Forest Props.png<>uid://hgi46lq4gcj::::res://assets/Water Tileset.png<>uid://b4vy8qoq4pbhb::::res://assets/Forest Structures.png<>uid://hjoiqli2jugf::::res://actors/player/player.tscn<>uid://dgepyxg6guyue::::res://assets/Settlement.png<>uid://cot0fj85tj7gv::::res://assets/Trees.png<>res://actors/stamina/progress_bar.gd<>uid://d4jlii4uunvpa::::res://actors/enemies/basic_enemy.tscn<>uid://80hu430esg3q::::res://actors/enemies/shooting_enemy.tscn
+main.tscn::PackedScene::689916307362782272::1727399518::0::1::::<><>::uid://sj2g2li20vjp::::res://assets/Sample.png<>uid://3kk2eiobu0cu::::res://assets/Forest Cliff.png<>uid://bnc5c4m460vxg::::res://assets/Forest Tilesett.png<>uid://bb1pb7wjklpiw::::res://assets/Forest Props.png<>uid://hgi46lq4gcj::::res://assets/Water Tileset.png<>uid://b4vy8qoq4pbhb::::res://assets/Forest Structures.png<>uid://hjoiqli2jugf::::res://actors/player/player.tscn<>uid://dgepyxg6guyue::::res://assets/Settlement.png<>uid://cot0fj85tj7gv::::res://assets/Trees.png<>res://actors/stamina/progress_bar.gd<>uid://d4jlii4uunvpa::::res://actors/enemies/basic_enemy.tscn<>uid://80hu430esg3q::::res://actors/enemies/shooting_enemy.tscn
 test.png::CompressedTexture2D::6838575350812011797::1727205921::1727205904::1::::<><>::
 ::res://actors/::1726600711
-::res://actors/enemies/::1727387482
-basic_enemy.gd::GDScript::-1::1727386884::0::1::::Enemy<>CharacterStateMachine<>::
-basic_enemy.tscn::PackedScene::9214000555562550714::1727387482::0::1::::<><>::res://actors/enemies/basic_enemy.gd<>res://actors/enemies/idle.gd<>uid://ciywgwjhw0jp5::::res://Cacodaemon Sprite Sheet.png<>res://actors/enemies/chasing.gd
+::res://actors/enemies/::1727399484
+basic_enemy.gd::GDScript::-1::1727387986::0::1::::Enemy<>CharacterStateMachine<>::
+basic_enemy.tscn::PackedScene::9214000555562550714::1727395231::0::1::::<><>::res://actors/enemies/basic_enemy.gd<>res://actors/enemies/idle.gd<>uid://ciywgwjhw0jp5::::res://Cacodaemon Sprite Sheet.png<>res://actors/enemies/chasing.gd
 chasing.gd::GDScript::-1::1727386622::0::1::::<>State<>::
 idle.gd::GDScript::-1::1727377774::0::1::::<>State<>::
-idle_shoot.gd::GDScript::-1::1727387479::0::1::::<>State<>::
-shooting.gd::GDScript::-1::1727387469::0::1::::<>State<>::
-shooting_enemy.tscn::PackedScene::2368303586307650384::1727387482::0::1::::<><>::res://actors/enemies/basic_enemy.gd<>uid://ciywgwjhw0jp5::::res://Cacodaemon Sprite Sheet.png<>res://actors/enemies/idle_shoot.gd<>res://actors/enemies/shooting.gd
-::res://actors/player/::1727387482
-player.gd::GDScript::-1::1727381489::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::510766487269126745::1727387482::0::1::::<><>::res://actors/player/player.gd<>uid://cdey6bbvgbrld::::res://actors/projectile/projectile.tscn<>uid://cne5a2qlsqqwj::::res://calicoKitty_curiousIdleBreaker.png<>uid://dkstnas7yi0ww::::res://calicoKitty_walk.png<>uid://cdgk15savgrct::::res://fantasy_epicweapons_pack1_nobg.png
-::res://actors/projectile/::1727387482
-projectile.gd::GDScript::-1::1727372368::0::1::::<>Area2D<>::
-projectile.tscn::PackedScene::4993178031784361093::1727387482::0::1::::<><>::res://actors/projectile/projectile.gd
+idle_shoot.gd::GDScript::-1::1727392374::0::1::::<>State<>::
+shooting.gd::GDScript::-1::1727392505::0::1::::<>State<>::
+shooting_enemy.gd::GDScript::-1::1727393727::0::1::::Enemy2<>CharacterStateMachine<>::
+shooting_enemy.tscn::PackedScene::2368303586307650384::1727399484::0::1::::<><>::res://actors/enemies/shooting_enemy.gd<>uid://ciywgwjhw0jp5::::res://Cacodaemon Sprite Sheet.png<>res://actors/enemies/idle_shoot.gd<>res://actors/enemies/shooting.gd<>uid://ccndujur71k1a::::res://actors/projectile/enemy_projectile.tscn
+::res://actors/player/::1727395231
+player.gd::GDScript::-1::1727388354::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::510766487269126745::1727395231::0::1::::<><>::res://actors/player/player.gd<>uid://cdey6bbvgbrld::::res://actors/projectile/projectile.tscn<>uid://cne5a2qlsqqwj::::res://calicoKitty_curiousIdleBreaker.png<>uid://dkstnas7yi0ww::::res://calicoKitty_walk.png<>uid://cdgk15savgrct::::res://fantasy_epicweapons_pack1_nobg.png
+::res://actors/projectile/::1727399551
+Enemy_proj.png::CompressedTexture2D::5922942415386873930::1727399539::1727399554::1::::<><>::
+enemy_projectile.gd::GDScript::-1::1727393594::0::1::::<>Area2D<>::
+enemy_projectile.tscn::PackedScene::4940274336743880204::1727395234::0::1::::<><>::res://actors/projectile/enemy_projectile.gd
+Player_particle.png::CompressedTexture2D::8227635292100432330::1727399551::1727399554::1::::<><>::
+projectile.gd::GDScript::-1::1727388778::0::1::::<>Area2D<>::
+projectile.tscn::PackedScene::4993178031784361093::1727395231::0::1::::<><>::res://actors/projectile/projectile.gd
 ::res://actors/stamina/::1726600715
 progress_bar.gd::GDScript::-1::1726249523::0::1::::<>ProgressBar<>::
 ::res://assets/::1726778914
