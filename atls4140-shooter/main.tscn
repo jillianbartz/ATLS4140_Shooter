@@ -24336,6 +24336,7 @@ z_index = 3
 position = Vector2(804.904, 235.725)
 
 [node name="ShootingEnemy" parent="." instance=ExtResource("12_huqym")]
+z_index = 4
 position = Vector2(296.961, 406.872)
 
 [connection signal="stamina_empty" from="Player2/Camera2D/StaminaBar" to="Player2" method="_on_progress_bar_stamina_empty"]

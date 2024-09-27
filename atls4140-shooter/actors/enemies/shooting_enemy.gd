@@ -23,6 +23,11 @@ func hit(damage_number: int):
 	$AnimationPlayer.play("idle")
 
 func _on_shooting_start_shoot(shooting: bool) -> void:
+	var angle = rad_to_deg(global_position.direction_to(shooting_state.target.global_position).angle())
+	if (angle < 90 and angle < 270):
+		$MainSprite.flip_h = false
+	elif (angle >= 90 and angle <= 270):
+		$MainSprite.flip_h = true
 	if($WaitShoot.is_stopped()):
 		var new_projectile = projectile_scene.instantiate()
 		new_projectile.position = global_position
