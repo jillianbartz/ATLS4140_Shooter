@@ -10,7 +10,6 @@ func fire(forward: Vector2, speed: float):
 func _physics_process(delta):
 	position += velocity * delta
 
-
 func _on_time_to_live_timeout():
 	queue_free()
 

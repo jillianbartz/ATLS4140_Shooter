@@ -5,14 +5,19 @@ class_name Player
 @export var move_speed: float = 200.0
 @export var hp: int = 10
 
+@export var popupText = "text"
+
 var hold: bool = false
 var holdAmount: float = 0.0
 var sprint: bool = false
 var health: int = 10
 
+var has_key: bool = false
+
 @onready var enemy1 = get_node("/root/Main/BasicEnemy")
 @onready var enemy2 = get_node("/root/Main/BasicEnemy")
-
+@onready var key_obtained = load("res://dialogue/key_popup.tscn")
+@onready var need_key = load("res://dialogue/door_popup.tscn")
 
 func _input(event):
 	if (event is InputEventMouseButton):
@@ -77,12 +82,28 @@ func _on_progress_bar_stamina_empty(value: Variant) -> void:
 	if(value):
 		sprint = true
 
-func _ready():
-	enemy1.connect("enemy1_hit", Callable(self, "_on_enemy1_hit"))
-	enemy2.connect("enemy2_hit", Callable(self, "_on_enemy2_hit"))
 	
 
 
 func _on_enemy1_hit(damage: int) -> void:
 	health -= damage
 	$HealthBar.value = health
+
+
+func _on_key_area_body_entered(body: Node2D) -> void:
+	var new_key_obtained = key_obtained.instantiate()
+	popupText = "Obtained Key!"
+	new_key_obtained.text = popupText
+	get_tree().current_scene.add_child(new_key_obtained)
+	has_key = true
+
+
+func _on_house_body_entered(body: Node2D) -> void:
+	if(body is Player):
+		if(has_key):
+			get_tree().change_scene_to_file("res://level_2.tscn")
+		else:
+			var new_key_obtained = key_obtained.instantiate()
+			popupText = "Door is Locked"
+			new_key_obtained.text = popupText
+			get_tree().current_scene.add_child(new_key_obtained)

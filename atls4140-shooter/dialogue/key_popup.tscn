@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4t8mnprqr5ml"]
+
+[ext_resource type="Script" path="res://dialogue/key_popup.gd" id="1_2cbdu"]
+[ext_resource type="Texture2D" uid="uid://dhhxfl6llxwrv" path="res://assets/border_02_nobackground.png" id="2_kqk4m"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_2cbdu")
+
+[node name="Duration" type="Timer" parent="."]
+one_shot = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 400.0
+offset_top = 117.0
+offset_right = 442.0
+offset_bottom = 159.0
+scale = Vector2(8.65904, 0.913893)
+texture = ExtResource("2_kqk4m")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 4.27299
+offset_top = 3.28265
+offset_right = 44.273
+offset_bottom = 43.2826
+scale = Vector2(0.848324, 0.892723)
+color = Color(0.976471, 0.941176, 0.878431, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="TextureRect/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.146345
+anchor_top = -0.0306426
+anchor_right = -0.146345
+anchor_bottom = -0.0306421
+offset_left = 7.21514
+offset_top = 2.45142
+offset_right = 116.215
+offset_bottom = 25.4514
+scale = Vector2(0.331439, 1.60858)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="timeout" from="Duration" to="." method="_on_duration_timeout"]
