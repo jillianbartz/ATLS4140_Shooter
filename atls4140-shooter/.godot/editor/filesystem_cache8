@@ -1,44 +1,50 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1728324830
+::res://::1728340071
 Cacodaemon Sprite Sheet.png::CompressedTexture2D::5385244840957571208::1727208092::1727208093::1::::<><>::
 Cacodaemon_Sprite_Sheet_prple.png::CompressedTexture2D::2744069486337910693::1727399463::1727399464::1::::<><>::
 calicoKitty_curiousIdleBreaker.png::CompressedTexture2D::5695376798851672501::1726776552::1726778914::1::::<><>::
 calicoKitty_sleepyIdleBreaker.png::CompressedTexture2D::8188915407167810645::1726776552::1726778914::1::::<><>::
 calicoKitty_walk.png::CompressedTexture2D::7899486154508858662::1726776552::1726778914::1::::<><>::
+dead.gd::GDScript::-1::1728337119::0::1::::<>Node2D<>::
+dead.tscn::PackedScene::4776957425069188862::1728340071::0::1::::<><>::res://dead.gd<>uid://dinigo6nhe5kb::::res://assets/startScreen.jpg<>uid://dhhxfl6llxwrv::::res://assets/border_02_nobackground.png<>res://restart_button.gd
 fantasy_epicweapons_pack1_nobg.png::CompressedTexture2D::4996449368929152283::1727207291::1727207296::1::::<><>::
-health_bar.gd::GDScript::-1::1727380562::0::1::::<>ProgressBar<>::
 icon.svg::CompressedTexture2D::9094897157682920779::1725999412::1725999498::1::::<><>::
 key.gd::GDScript::-1::1728154748::0::1::::<>CharacterBody2D<>::
-level_2.tscn::PackedScene::4596423228630700581::1728324665::0::1::::<><>::uid://hjoiqli2jugf::::res://actors/player/player.tscn<>res://actors/stamina/progress_bar.gd<>uid://80hu430esg3q::::res://actors/enemies/shooting_enemy.tscn<>uid://dgepyxg6guyue::::res://assets/Settlement.png<>uid://6bha1r5o3af8::::res://assets/teddy-bear.png<>uid://d4jlii4uunvpa::::res://actors/enemies/basic_enemy.tscn<>uid://gvifkfoyne40::::res://assets/potion.webp<>uid://ev12rt7jm83c::::res://assets/chest.png
-level_3.tscn::PackedScene::2848449269280948919::1728324665::0::1::::<><>::uid://3kk2eiobu0cu::::res://assets/Forest Cliff.png<>uid://dgepyxg6guyue::::res://assets/Settlement.png<>uid://bb1pb7wjklpiw::::res://assets/Forest Props.png<>res://mouse.gd<>uid://b0d6i5oittf4n::::res://assets/MouseIdle.png<>uid://hjoiqli2jugf::::res://actors/player/player.tscn<>res://mouse_area.gd
-main.tscn::PackedScene::689916307362782272::1728324664::0::1::::<><>::uid://sj2g2li20vjp::::res://assets/Sample.png<>uid://3kk2eiobu0cu::::res://assets/Forest Cliff.png<>uid://bnc5c4m460vxg::::res://assets/Forest Tilesett.png<>uid://bb1pb7wjklpiw::::res://assets/Forest Props.png<>uid://hgi46lq4gcj::::res://assets/Water Tileset.png<>uid://b4vy8qoq4pbhb::::res://assets/Forest Structures.png<>uid://hjoiqli2jugf::::res://actors/player/player.tscn<>uid://dgepyxg6guyue::::res://assets/Settlement.png<>uid://cot0fj85tj7gv::::res://assets/Trees.png<>res://actors/stamina/progress_bar.gd<>uid://d4jlii4uunvpa::::res://actors/enemies/basic_enemy.tscn<>uid://80hu430esg3q::::res://actors/enemies/shooting_enemy.tscn<>uid://ckb30ug5wo1nr::::res://assets/pixel-key.png
+level_2.tscn::PackedScene::4596423228630700581::1728340070::0::1::::<><>::uid://hjoiqli2jugf::::res://actors/player/player.tscn<>res://actors/stamina/progress_bar.gd<>uid://80hu430esg3q::::res://actors/enemies/shooting_enemy.tscn<>uid://dgepyxg6guyue::::res://assets/Settlement.png<>uid://6bha1r5o3af8::::res://assets/teddy-bear.png<>uid://d4jlii4uunvpa::::res://actors/enemies/basic_enemy.tscn<>uid://gvifkfoyne40::::res://assets/potion.webp<>uid://ev12rt7jm83c::::res://assets/chest.png
+level_3.tscn::PackedScene::2848449269280948919::1728340071::0::1::::<><>::uid://3kk2eiobu0cu::::res://assets/Forest Cliff.png<>uid://dgepyxg6guyue::::res://assets/Settlement.png<>uid://bb1pb7wjklpiw::::res://assets/Forest Props.png<>res://mouse.gd<>uid://b0d6i5oittf4n::::res://assets/MouseIdle.png<>uid://hjoiqli2jugf::::res://actors/player/player.tscn<>res://mouse_area.gd
+main.gd::GDScript::-1::1728339471::0::1::::<>Node2D<>::
+main.tscn::PackedScene::689916307362782272::1728340070::0::1::::<><>::uid://sj2g2li20vjp::::res://assets/Sample.png<>res://main.gd<>uid://3kk2eiobu0cu::::res://assets/Forest Cliff.png<>uid://bnc5c4m460vxg::::res://assets/Forest Tilesett.png<>uid://bb1pb7wjklpiw::::res://assets/Forest Props.png<>uid://hgi46lq4gcj::::res://assets/Water Tileset.png<>uid://b4vy8qoq4pbhb::::res://assets/Forest Structures.png<>uid://hjoiqli2jugf::::res://actors/player/player.tscn<>uid://dgepyxg6guyue::::res://assets/Settlement.png<>uid://cot0fj85tj7gv::::res://assets/Trees.png<>res://actors/stamina/progress_bar.gd<>uid://d4jlii4uunvpa::::res://actors/enemies/basic_enemy.tscn<>uid://80hu430esg3q::::res://actors/enemies/shooting_enemy.tscn<>uid://ckb30ug5wo1nr::::res://assets/pixel-key.png<>uid://b35s7b3k51tjj::::res://assets/audio/759076__josefpres__piano-loops-106-efect-3-octave-long-loop-120-bpm.wav
 mouse.gd::GDScript::-1::1728271515::0::1::::<>CharacterBody2D<>::
 mouse_area.gd::GDScript::-1::1728321520::0::1::::<>Area2D<>::
-start.tscn::PackedScene::8890289428959242049::1728324830::0::1::::<><>::
+default_bus_layout.tres::AudioBusLayout::7597705736765648771::1728339319::0::1::::<><>::
+restart_button.gd::GDScript::-1::1728336729::0::1::::<>Button<>::
+start.tscn::PackedScene::8890289428959242049::1728340071::0::1::::<><>::uid://dinigo6nhe5kb::::res://assets/startScreen.jpg<>uid://dhhxfl6llxwrv::::res://assets/border_02_nobackground.png<>res://start_button.gd
+start_button.gd::GDScript::-1::1728335752::0::1::::<>Button<>::
 test.png::CompressedTexture2D::6838575350812011797::1727205921::1727205904::1::::<><>::
 ::res://actors/::1726600711
-::res://actors/enemies/::1728324665
-basic_enemy.gd::GDScript::-1::1728323570::0::1::::Enemy<>CharacterStateMachine<>::
-basic_enemy.tscn::PackedScene::9214000555562550714::1728324665::0::1::::<><>::res://actors/enemies/basic_enemy.gd<>res://actors/enemies/idle.gd<>uid://ciywgwjhw0jp5::::res://Cacodaemon Sprite Sheet.png<>res://actors/enemies/chasing.gd
+::res://actors/enemies/::1728340071
+basic_enemy.gd::GDScript::-1::1728339695::0::1::::Enemy<>CharacterStateMachine<>::
+basic_enemy.tscn::PackedScene::9214000555562550714::1728340071::0::1::::<><>::res://actors/enemies/basic_enemy.gd<>res://actors/enemies/idle.gd<>uid://ciywgwjhw0jp5::::res://Cacodaemon Sprite Sheet.png<>res://actors/enemies/chasing.gd<>uid://dya1gj4pruas5::::res://assets/audio/zapsplat_horror_monster_throw_hit_impact_against_wall_002_88763.mp3
 chasing.gd::GDScript::-1::1727386622::0::1::::<>State<>::
-idle.gd::GDScript::-1::1727377774::0::1::::<>State<>::
+idle.gd::GDScript::-1::1728336225::0::1::::<>State<>::
 idle_shoot.gd::GDScript::-1::1727401564::0::1::::<>State<>::
 shooting.gd::GDScript::-1::1727400082::0::1::::<>State<>::
-shooting_enemy.gd::GDScript::-1::1728323616::0::1::::Enemy2<>CharacterStateMachine<>::
-shooting_enemy.tscn::PackedScene::2368303586307650384::1728324665::0::1::::<><>::res://actors/enemies/shooting_enemy.gd<>uid://bfdionujujy2h::::res://Cacodaemon_Sprite_Sheet_prple.png<>res://actors/enemies/idle_shoot.gd<>res://actors/enemies/shooting.gd<>uid://ccndujur71k1a::::res://actors/projectile/enemy_projectile.tscn
-::res://actors/player/::1728324665
-player.gd::GDScript::-1::1728324357::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::510766487269126745::1728324665::0::1::::<><>::res://actors/player/player.gd<>uid://cdey6bbvgbrld::::res://actors/projectile/projectile.tscn<>uid://cne5a2qlsqqwj::::res://calicoKitty_curiousIdleBreaker.png<>uid://dkstnas7yi0ww::::res://calicoKitty_walk.png<>uid://cdgk15savgrct::::res://fantasy_epicweapons_pack1_nobg.png
-::res://actors/projectile/::1728166944
+shooting_enemy.gd::GDScript::-1::1728339764::0::1::::Enemy2<>CharacterStateMachine<>::
+shooting_enemy.tscn::PackedScene::2368303586307650384::1728340071::0::1::::<><>::res://actors/enemies/shooting_enemy.gd<>uid://bfdionujujy2h::::res://Cacodaemon_Sprite_Sheet_prple.png<>res://actors/enemies/idle_shoot.gd<>res://actors/enemies/shooting.gd<>uid://ccndujur71k1a::::res://actors/projectile/enemy_projectile.tscn<>uid://m766mn68qlqg::::res://assets/audio/zapsplat_horror_monster_throw_hit_impact_against_wall_001_88870.mp3
+::res://actors/player/::1728340071
+health_bar.gd::GDScript::-1::1728335054::0::1::::<>ProgressBar<>::
+player.gd::GDScript::-1::1728339654::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::510766487269126745::1728340071::0::1::::<><>::res://actors/player/player.gd<>uid://cdey6bbvgbrld::::res://actors/projectile/projectile.tscn<>uid://cne5a2qlsqqwj::::res://calicoKitty_curiousIdleBreaker.png<>uid://dkstnas7yi0ww::::res://calicoKitty_walk.png<>uid://cdgk15savgrct::::res://fantasy_epicweapons_pack1_nobg.png<>res://actors/player/health_bar.gd<>uid://b315xpe7pgpmx::::res://assets/audio/zapsplat_cartoon_anime_laser_weapon_spark_92484.mp3
+::res://actors/projectile/::1728340071
 Enemy_proj.png::CompressedTexture2D::5922942415386873930::1727399539::1727399554::1::::<><>::
 enemy_projectile.gd::GDScript::-1::1727401997::0::1::::<>Area2D<>::
 enemy_projectile.tscn::PackedScene::4940274336743880204::1728166944::0::1::::<><>::res://actors/projectile/enemy_projectile.gd<>uid://cqnd84v1ju46i::::res://actors/projectile/Enemy_proj.png
 Player_particle.png::CompressedTexture2D::8227635292100432330::1727399551::1727399554::1::::<><>::
-projectile.gd::GDScript::-1::1727388778::0::1::::<>Area2D<>::
-projectile.tscn::PackedScene::4993178031784361093::1728166942::0::1::::<><>::res://actors/projectile/projectile.gd<>uid://dphr7ltrhi2ve::::res://actors/projectile/Player_particle.png
+projectile.gd::GDScript::-1::1728340067::0::1::::<>Area2D<>::
+projectile.tscn::PackedScene::4993178031784361093::1728340071::0::1::::<><>::res://actors/projectile/projectile.gd<>uid://dphr7ltrhi2ve::::res://actors/projectile/Player_particle.png<>uid://bbtcuso46omki::::res://assets/audio/757896__audiopapkin__riser-hit-sfx-107.wav
 ::res://actors/stamina/::1726600715
 progress_bar.gd::GDScript::-1::1726249523::0::1::::<>ProgressBar<>::
-::res://assets/::1728325207
+::res://assets/::1728337697
 border_02_nobackground.png::CompressedTexture2D::7666440646788309303::1728166004::1728166005::1::::<><>::
 chest.jpeg::CompressedTexture2D::5603402037175145862::1728257331::1728257387::1::::<><>::
 chest.png::CompressedTexture2D::325735089349452782::1728257385::1728257387::1::::<><>::
@@ -56,6 +62,14 @@ teddy-bear.jpeg::CompressedTexture2D::3378741250698899796::1728251159::172825126
 teddy-bear.png::CompressedTexture2D::2178344942734079883::1728251257::1728251269::1::::<><>::
 Trees.png::CompressedTexture2D::5796235734512018393::1726169273::1726773413::1::::<><>::
 Water Tileset.png::CompressedTexture2D::14830804174665325::1726169273::1726773413::1::::<><>::
+::res://assets/audio/::1728340200
+757896__audiopapkin__riser-hit-sfx-107.wav::AudioStreamWAV::2495990822929082636::1728338855::1728339131::1::::<><>::
+759076__josefpres__piano-loops-106-efect-3-octave-long-loop-120-bpm.wav::AudioStreamWAV::4414789785727916407::1728338053::1728339131::1::::<><>::
+Forest Frolic Loop.mp3::AudioStreamMP3::2512879131957453548::1728338457::1728339131::1::::<><>::
+SHOOT012.mp3::AudioStreamMP3::7348183967969873466::1387920520::1728340203::1::::<><>::
+zapsplat_cartoon_anime_laser_weapon_spark_92484.mp3::AudioStreamMP3::4407245505710070539::1728337799::1728339131::1::::<><>::
+zapsplat_horror_monster_throw_hit_impact_against_wall_001_88870.mp3::AudioStreamMP3::910264449989012098::1728337706::1728339131::1::::<><>::
+zapsplat_horror_monster_throw_hit_impact_against_wall_002_88763.mp3::AudioStreamMP3::8845384173181952978::1728337677::1728339131::1::::<><>::
 ::res://dialogue/::1728325181
 key_popup.gd::GDScript::-1::1728324439::0::1::::<>CanvasLayer<>::
 key_popup.tscn::PackedScene::6849566807274534019::1728324665::0::1::::<><>::res://dialogue/key_popup.gd<>uid://dhhxfl6llxwrv::::res://assets/border_02_nobackground.png

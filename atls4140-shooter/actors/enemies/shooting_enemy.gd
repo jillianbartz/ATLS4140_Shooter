@@ -42,6 +42,7 @@ func _on_shooting_start_shoot(shooting: bool) -> void:
 		$WaitShoot.start()
 		$AnimationPlayer.stop()
 		$AnimationPlayer.play("attack")
+		$AudioStreamPlayer2D.play()
 		await $AnimationPlayer.animation_finished
 		$AnimationPlayer.play("idle")
 		return

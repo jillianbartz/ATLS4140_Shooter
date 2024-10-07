@@ -3,6 +3,7 @@ extends Area2D
 var velocity: Vector2 = Vector2(0,0)
 
 func fire(forward: Vector2, speed: float):
+	$AudioStreamPlayer2D.play()
 	velocity = forward * speed
 	look_at(position + forward)
 

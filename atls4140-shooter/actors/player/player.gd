@@ -96,9 +96,9 @@ func _ready():
 
 func _on_enemy1_hit(damage: int) -> void:
 	health -= damage
-	print("hit")
 	$HealthBar.value = health
-
+	$AudioStreamPlayer2D.play()
+	print(health)
 
 func _on_key_area_body_entered(body: Node2D) -> void:
 	var new_key_obtained = dialogue.instantiate()

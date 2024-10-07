@@ -1,10 +1,12 @@
-[gd_scene load_steps=17 format=3 uid="uid://hjoiqli2jugf"]
+[gd_scene load_steps=19 format=3 uid="uid://hjoiqli2jugf"]
 
 [ext_resource type="Script" path="res://actors/player/player.gd" id="1_f7335"]
 [ext_resource type="PackedScene" uid="uid://cdey6bbvgbrld" path="res://actors/projectile/projectile.tscn" id="2_v3s2n"]
 [ext_resource type="Texture2D" uid="uid://cne5a2qlsqqwj" path="res://calicoKitty_curiousIdleBreaker.png" id="3_5pf5c"]
 [ext_resource type="Texture2D" uid="uid://dkstnas7yi0ww" path="res://calicoKitty_walk.png" id="4_vhio5"]
 [ext_resource type="Texture2D" uid="uid://cdgk15savgrct" path="res://fantasy_epicweapons_pack1_nobg.png" id="5_2owwf"]
+[ext_resource type="Script" path="res://actors/player/health_bar.gd" id="6_ivuih"]
+[ext_resource type="AudioStream" uid="uid://b315xpe7pgpmx" path="res://assets/audio/zapsplat_cartoon_anime_laser_weapon_spark_92484.mp3" id="7_hk26i"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_ry6n4"]
 
@@ -447,3 +449,9 @@ offset_bottom = -26.7077
 max_value = 10.0
 value = 10.0
 show_percentage = false
+script = ExtResource("6_ivuih")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_hk26i")
+volume_db = -10.0
+bus = &"SFX"

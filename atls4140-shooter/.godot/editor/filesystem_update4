@@ -14,3 +14,17 @@ res://actors/enemies/shooting_enemy.gd
 res://dialogue/label.gd
 res://start_button.gd
 res://start.tscn
+res://pause.tscn
+res://health_bar.gd
+res://actors/player/health_bar.gd
+res://dead.tscn
+res://restart_button.gd
+res://actors/enemies/idle.gd
+res://dead.gd
+res://main.gd
+res://default_bus_layout.tres
+res://actors/projectile/projectile.tscn
+res://actors/projectile/projectile.gd
+res://actors/stamina/progress_bar.gd
+res://level_2.gd
+res://level_3.gd

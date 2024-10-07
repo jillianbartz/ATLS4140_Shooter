@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://80hu430esg3q"]
+[gd_scene load_steps=15 format=3 uid="uid://80hu430esg3q"]
 
 [ext_resource type="Script" path="res://actors/enemies/shooting_enemy.gd" id="1_im3yn"]
 [ext_resource type="Texture2D" uid="uid://bfdionujujy2h" path="res://Cacodaemon_Sprite_Sheet_prple.png" id="2_flh4r"]
 [ext_resource type="Script" path="res://actors/enemies/idle_shoot.gd" id="3_0wdhf"]
 [ext_resource type="Script" path="res://actors/enemies/shooting.gd" id="4_ccpkd"]
 [ext_resource type="PackedScene" uid="uid://ccndujur71k1a" path="res://actors/projectile/enemy_projectile.tscn" id="6_cbkr2"]
+[ext_resource type="AudioStream" uid="uid://m766mn68qlqg" path="res://assets/audio/zapsplat_horror_monster_throw_hit_impact_against_wall_001_88870.mp3" id="6_h0y3t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rrq2l"]
 size = Vector2(47, 42)
@@ -324,5 +325,10 @@ shape = SubResource("CircleShape2D_2ub5o")
 [node name="WaitShoot" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_h0y3t")
+volume_db = -15.0
+bus = &"SFX"
 
 [connection signal="start_shoot" from="States/Shooting" to="." method="_on_shooting_start_shoot"]

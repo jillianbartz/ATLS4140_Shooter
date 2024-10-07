@@ -1,5 +1,6 @@
-[gd_scene load_steps=22 format=4 uid="uid://bgt2sqb6h7p00"]
+[gd_scene load_steps=24 format=4 uid="uid://bgt2sqb6h7p00"]
 
+[ext_resource type="Script" path="res://level_3.gd" id="1_8l7wb"]
 [ext_resource type="Texture2D" uid="uid://3kk2eiobu0cu" path="res://assets/Forest Cliff.png" id="1_edvht"]
 [ext_resource type="Texture2D" uid="uid://dgepyxg6guyue" path="res://assets/Settlement.png" id="2_enwd4"]
 [ext_resource type="Texture2D" uid="uid://bb1pb7wjklpiw" path="res://assets/Forest Props.png" id="3_2ao8w"]
@@ -7,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b0d6i5oittf4n" path="res://assets/MouseIdle.png" id="4_u88n0"]
 [ext_resource type="PackedScene" uid="uid://hjoiqli2jugf" path="res://actors/player/player.tscn" id="6_i54k0"]
 [ext_resource type="Script" path="res://mouse_area.gd" id="6_t5rik"]
+[ext_resource type="AudioStream" uid="uid://bb2i0trf8i4ce" path="res://assets/audio/Forest Frolic Loop.mp3" id="8_fjbwj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m22bn"]
 texture = ExtResource("1_edvht")
@@ -2346,6 +2348,7 @@ _data = {
 [node name="Level3" type="Node2D"]
 position = Vector2(-593, 1)
 scale = Vector2(3.48466, 3.34572)
+script = ExtResource("1_8l7wb")
 
 [node name="TileMapLayers" type="Node2D" parent="."]
 
@@ -2409,6 +2412,11 @@ shape = SubResource("CircleShape2D_pxeii")
 [node name="Player" parent="." instance=ExtResource("6_i54k0")]
 z_index = 4
 position = Vector2(345, 147)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_fjbwj")
+volume_db = -15.0
+bus = &"BackgroundMusic"
 
 [connection signal="body_entered" from="TileMapLayers/BackPortal" to="Player" method="_on_back_portal_body_entered"]
 [connection signal="body_entered" from="Mouse/MouseArea" to="Mouse/MouseArea" method="_on_body_entered"]

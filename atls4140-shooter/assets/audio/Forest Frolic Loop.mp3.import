@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bb2i0trf8i4ce"
+path="res://.godot/imported/Forest Frolic Loop.mp3-6d3faec3dbb19c5ab77e878a2dc21768.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Forest Frolic Loop.mp3"
+dest_files=["res://.godot/imported/Forest Frolic Loop.mp3-6d3faec3dbb19c5ab77e878a2dc21768.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

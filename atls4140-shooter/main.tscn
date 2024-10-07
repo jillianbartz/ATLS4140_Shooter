@@ -1,6 +1,7 @@
-[gd_scene load_steps=51 format=4 uid="uid://j3g253drsxc7"]
+[gd_scene load_steps=54 format=4 uid="uid://j3g253drsxc7"]
 
 [ext_resource type="Texture2D" uid="uid://sj2g2li20vjp" path="res://assets/Sample.png" id="1_o7cry"]
+[ext_resource type="Script" path="res://main.gd" id="1_u1ffl"]
 [ext_resource type="Texture2D" uid="uid://3kk2eiobu0cu" path="res://assets/Forest Cliff.png" id="2_4g2u0"]
 [ext_resource type="Texture2D" uid="uid://bnc5c4m460vxg" path="res://assets/Forest Tilesett.png" id="2_ti7jp"]
 [ext_resource type="Texture2D" uid="uid://bb1pb7wjklpiw" path="res://assets/Forest Props.png" id="3_cafxe"]
@@ -11,8 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://cot0fj85tj7gv" path="res://assets/Trees.png" id="8_ecc4j"]
 [ext_resource type="Script" path="res://actors/stamina/progress_bar.gd" id="10_5dxb8"]
 [ext_resource type="PackedScene" uid="uid://d4jlii4uunvpa" path="res://actors/enemies/basic_enemy.tscn" id="11_k1sd6"]
+[ext_resource type="AudioStream" uid="uid://bbtcuso46omki" path="res://assets/audio/757896__audiopapkin__riser-hit-sfx-107.wav" id="12_h2e1k"]
 [ext_resource type="PackedScene" uid="uid://80hu430esg3q" path="res://actors/enemies/shooting_enemy.tscn" id="12_huqym"]
 [ext_resource type="Texture2D" uid="uid://ckb30ug5wo1nr" path="res://assets/pixel-key.png" id="13_ffwhv"]
+[ext_resource type="AudioStream" uid="uid://b35s7b3k51tjj" path="res://assets/audio/759076__josefpres__piano-loops-106-efect-3-octave-long-loop-120-bpm.wav" id="15_h04l8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dtu5j"]
 texture = ExtResource("2_4g2u0")
@@ -26506,6 +26509,7 @@ size = Vector2(25.9442, 36.8595)
 
 [node name="Main" type="Node2D"]
 scale = Vector2(1.0035, 1.00523)
+script = ExtResource("1_u1ffl")
 
 [node name="TileMapGroup" type="Node2D" parent="."]
 
@@ -26590,6 +26594,11 @@ value = 1.7
 show_percentage = false
 script = ExtResource("10_5dxb8")
 
+[node name="Sprint" type="AudioStreamPlayer2D" parent="Player2/Camera2D/StaminaBar"]
+stream = ExtResource("12_h2e1k")
+volume_db = -10.0
+bus = &"SFX"
+
 [node name="BasicEnemy" parent="." instance=ExtResource("11_k1sd6")]
 z_index = 3
 position = Vector2(804.904, 235.725)
@@ -26622,6 +26631,11 @@ script = SubResource("GDScript_q0w71")
 [node name="HouseDoor" type="CollisionShape2D" parent="House"]
 position = Vector2(0, 1.52588e-05)
 shape = SubResource("RectangleShape2D_0bjrn")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_h04l8")
+volume_db = -15.0
+bus = &"BackgroundMusic"
 
 [connection signal="stamina_empty" from="Player2/Camera2D/StaminaBar" to="Player2" method="_on_progress_bar_stamina_empty"]
 [connection signal="body_entered" from="KeyArea" to="Player2" method="_on_key_area_body_entered"]

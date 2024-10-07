@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdey6bbvgbrld"]
+[gd_scene load_steps=5 format=3 uid="uid://cdey6bbvgbrld"]
 
 [ext_resource type="Script" path="res://actors/projectile/projectile.gd" id="1_8bvg4"]
 [ext_resource type="Texture2D" uid="uid://dphr7ltrhi2ve" path="res://actors/projectile/Player_particle.png" id="2_srofb"]
+[ext_resource type="AudioStream" uid="uid://dcxrrs6m7mqcw" path="res://assets/audio/SHOOT012.mp3" id="3_0obhn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_40hxe"]
 
@@ -21,6 +22,11 @@ shape = SubResource("CircleShape2D_40hxe")
 
 [node name="TimeToLive" type="Timer" parent="."]
 autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_0obhn")
+volume_db = -15.0
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="TimeToLive" to="." method="_on_time_to_live_timeout"]

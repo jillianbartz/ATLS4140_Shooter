@@ -11,6 +11,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(1.12528, 0.630213)
 texture = ExtResource("1_tjm8k")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect"]
 layout_mode = 0
@@ -20,6 +21,7 @@ offset_right = 344.146
 offset_bottom = 664.012
 scale = Vector2(10.3506, 7.87898)
 texture = ExtResource("2_ujtwl")
+metadata/_edit_use_anchors_ = true
 
 [node name="StartButton" type="Button" parent="TextureRect/TextureRect"]
 layout_mode = 0
@@ -31,6 +33,7 @@ scale = Vector2(0.0248051, 0.0405137)
 theme_override_font_sizes/font_size = 600
 text = "Start"
 script = ExtResource("3_8eabi")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="TextureRect"]
 layout_mode = 0
@@ -40,5 +43,6 @@ offset_right = 813.385
 offset_bottom = 303.841
 theme_override_font_sizes/font_size = 50
 text = "The Wandering Traveler"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="TextureRect/TextureRect/StartButton" to="TextureRect/TextureRect/StartButton" method="_on_pressed"]

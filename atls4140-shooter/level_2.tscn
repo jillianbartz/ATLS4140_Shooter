@@ -1,13 +1,16 @@
-[gd_scene load_steps=18 format=4 uid="uid://b6qsoinsqryyn"]
+[gd_scene load_steps=21 format=4 uid="uid://b6qsoinsqryyn"]
 
 [ext_resource type="PackedScene" uid="uid://hjoiqli2jugf" path="res://actors/player/player.tscn" id="1_sgd2s"]
+[ext_resource type="Script" path="res://level_2.gd" id="1_w5t4g"]
 [ext_resource type="Script" path="res://actors/stamina/progress_bar.gd" id="2_2nkay"]
+[ext_resource type="AudioStream" uid="uid://bbtcuso46omki" path="res://assets/audio/757896__audiopapkin__riser-hit-sfx-107.wav" id="3_7sr63"]
 [ext_resource type="PackedScene" uid="uid://80hu430esg3q" path="res://actors/enemies/shooting_enemy.tscn" id="3_jfjpd"]
 [ext_resource type="Texture2D" uid="uid://dgepyxg6guyue" path="res://assets/Settlement.png" id="3_shrf1"]
 [ext_resource type="Texture2D" uid="uid://6bha1r5o3af8" path="res://assets/teddy-bear.png" id="4_d3uki"]
 [ext_resource type="PackedScene" uid="uid://d4jlii4uunvpa" path="res://actors/enemies/basic_enemy.tscn" id="5_jb1jy"]
 [ext_resource type="Texture2D" uid="uid://gvifkfoyne40" path="res://assets/potion.webp" id="6_vdm7h"]
 [ext_resource type="Texture2D" uid="uid://ev12rt7jm83c" path="res://assets/chest.png" id="7_cvr8v"]
+[ext_resource type="AudioStream" uid="uid://b35s7b3k51tjj" path="res://assets/audio/759076__josefpres__piano-loops-106-efect-3-octave-long-loop-120-bpm.wav" id="10_pm5ce"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fg0di"]
 texture = ExtResource("3_shrf1")
@@ -984,6 +987,7 @@ size = Vector2(52.8714, 67.8265)
 [node name="Level2" type="Node2D"]
 position = Vector2(2, 6)
 scale = Vector2(1.003, 1.003)
+script = ExtResource("1_w5t4g")
 
 [node name="Player2" parent="." instance=ExtResource("1_sgd2s")]
 z_index = 3
@@ -1006,6 +1010,11 @@ max_value = 1.7
 value = 1.7
 show_percentage = false
 script = ExtResource("2_2nkay")
+
+[node name="Sprint" type="AudioStreamPlayer2D" parent="Player2/Camera2D/StaminaBar"]
+stream = ExtResource("3_7sr63")
+volume_db = -10.0
+bus = &"SFX"
 
 [node name="TileMapGroup" type="Node2D" parent="."]
 scale = Vector2(1.10398, 1.42826)
@@ -1125,6 +1134,11 @@ scale = Vector2(0.839992, 0.939789)
 z_index = 3
 position = Vector2(2087.74, -252.243)
 scale = Vector2(1.0379, 1.06317)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_pm5ce")
+volume_db = -15.0
+bus = &"BackgroundMusic"
 
 [connection signal="stamina_empty" from="Player2/Camera2D/StaminaBar" to="Player2" method="_on_progress_bar_stamina_empty"]
 [connection signal="body_entered" from="TeddyBear" to="Player2" method="_on_teddy_bear_body_entered"]

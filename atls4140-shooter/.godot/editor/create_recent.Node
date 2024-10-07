@@ -1,3 +1,4 @@
+AudioStreamPlayer2D
 Label
 Button
 TextureRect
@@ -11,5 +12,3 @@ CharacterBody2D
 TileMapLayer
 Node2D
 Node
-ColorRect
-Timer

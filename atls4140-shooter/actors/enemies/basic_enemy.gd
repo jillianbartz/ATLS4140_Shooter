@@ -35,9 +35,9 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		await $AnimationPlayer.animation_finished
 		enemy1_hit.emit(1)
 		await get_tree().create_timer(1).timeout
-	
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	await $AnimationPlayer.animation_finished
 	$AnimationPlayer.play("idle")
+	$AudioStreamPlayer2D.play()
 	player_touch = false
