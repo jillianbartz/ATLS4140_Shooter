@@ -44,9 +44,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Button1" type="Button" parent="TextureRect"]
 layout_mode = 0
 offset_left = 30.1997
-offset_top = 30.0145
+offset_top = 28.8043
 offset_right = 138.2
-offset_bottom = 138.015
+offset_bottom = 136.805
 scale = Vector2(0.0166003, 0.0821265)
 theme_override_font_sizes/font_size = 52
 text = "→
@@ -55,18 +55,18 @@ text = "→
 [node name="Button2" type="Button" parent="TextureRect"]
 layout_mode = 0
 offset_left = 19.9845
-offset_top = 30.2566
+offset_top = 29.0464
 offset_right = 127.984
-offset_bottom = 138.257
+offset_bottom = 137.047
 scale = Vector2(0.0166003, 0.0821265)
 theme_override_font_sizes/font_size = 52
 
 [node name="Button3" type="Button" parent="TextureRect"]
 layout_mode = 0
-offset_left = 9.93144
-offset_top = 30.0145
+offset_left = 9.93145
+offset_top = 28.8043
 offset_right = 117.931
-offset_bottom = 138.015
+offset_bottom = 136.805
 scale = Vector2(0.0166003, 0.0821265)
 theme_override_font_sizes/font_size = 52
 

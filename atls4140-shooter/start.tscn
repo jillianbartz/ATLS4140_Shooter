@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://dywr1d207wf2h"]
+
+[ext_resource type="Texture2D" uid="uid://dinigo6nhe5kb" path="res://assets/startScreen.jpg" id="1_tjm8k"]
+[ext_resource type="Texture2D" uid="uid://dhhxfl6llxwrv" path="res://assets/border_02_nobackground.png" id="2_ujtwl"]
+[ext_resource type="Script" path="res://start_button.gd" id="3_8eabi"]
+
+[node name="Start" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.12528, 0.630213)
+texture = ExtResource("1_tjm8k")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 302.146
+offset_top = 622.012
+offset_right = 344.146
+offset_bottom = 664.012
+scale = Vector2(10.3506, 7.87898)
+texture = ExtResource("2_ujtwl")
+
+[node name="StartButton" type="Button" parent="TextureRect/TextureRect"]
+layout_mode = 0
+offset_left = 3.46797
+offset_top = 4.43063
+offset_right = 1419.47
+offset_bottom = 830.431
+scale = Vector2(0.0248051, 0.0405137)
+theme_override_font_sizes/font_size = 600
+text = "Start"
+script = ExtResource("3_8eabi")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 236.385
+offset_top = 234.841
+offset_right = 813.385
+offset_bottom = 303.841
+theme_override_font_sizes/font_size = 50
+text = "The Wandering Traveler"
+
+[connection signal="pressed" from="TextureRect/TextureRect/StartButton" to="TextureRect/TextureRect/StartButton" method="_on_pressed"]

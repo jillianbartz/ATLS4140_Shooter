@@ -1,6 +1,8 @@
 extends CharacterStateMachine
 class_name Enemy2
 
+var dead = false
+
 @export var hp: int = 5
 
 @export var projectile_scene: Resource
@@ -9,9 +11,12 @@ signal enemy2_hit(damage: int)
 @onready var shooting_state = get_node("States/Shooting")
 
 func hit(damage_number: int):
+	if dead:
+		return
 	hp -= damage_number
 	print(hp)
 	if(hp <= 0):
+		dead = true
 		$AnimationPlayer.stop()
 		$AnimationPlayer.play("dead")
 		await $AnimationPlayer.animation_finished

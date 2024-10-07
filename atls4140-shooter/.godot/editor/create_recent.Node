@@ -1,6 +1,9 @@
+Label
 Button
-CanvasLayer
+TextureRect
 CollisionShape2D
+StaticBody2D
+CanvasLayer
 Area2D
 AnimationPlayer
 Sprite2D
@@ -9,7 +12,4 @@ TileMapLayer
 Node2D
 Node
 ColorRect
-TextureRect
 Timer
-Label
-AnimationTree

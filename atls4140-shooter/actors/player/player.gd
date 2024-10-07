@@ -85,9 +85,13 @@ func _ready():
 	if(get_tree().current_scene.name == "Main"):
 		enemyMain.connect("enemy1_hit", Callable(self, "_on_enemy1_hit"))
 	elif(get_tree().current_scene.name == "Level2"):
-		var enemyLevel2 = get_node("/root/Level2/BasicEnemy")
-		if(enemyLevel2):
-			enemyLevel2.connect("enemy1_hit", Callable(self, "_on_enemy1_hit"))
+		var enemy1Level2 = get_node("/root/Level2/BasicEnemy")
+		var enemy2Level2 = get_node("/root/Level2/BasicEnemy2")
+		var enemy3Level2 = get_node("/root/Level2/BasicEnemy3")
+		if(enemy1Level2 and enemy2Level2 and enemy3Level2):
+			enemy1Level2.connect("enemy1_hit", Callable(self, "_on_enemy1_hit"))
+			enemy2Level2.connect("enemy1_hit", Callable(self, "_on_enemy1_hit"))
+			enemy3Level2.connect("enemy1_hit", Callable(self, "_on_enemy1_hit"))
 
 
 func _on_enemy1_hit(damage: int) -> void:
@@ -114,9 +118,6 @@ func _on_house_body_entered(body: Node2D) -> void:
 			new_key_obtained.text = popupText
 			get_tree().current_scene.add_child(new_key_obtained)
 
-
-
-
 func _on_teddy_bear_body_entered(body: Node2D) -> void:
 	if(body is Player):
 		var teddy_bear = dialogue.instantiate()
@@ -134,7 +135,7 @@ func _on_potion_body_entered(body: Node2D) -> void:
 func _on_chest_body_entered(body: Node2D) -> void:
 	if(body is Player):
 		var chest = dialogue.instantiate()
-		chest.text = "Where the trees whisper \n, secrets await."
+		chest.text = "Where the trees whisper, \n secrets await."
 		get_tree().current_scene.add_child(chest)
 
 

@@ -4,22 +4,26 @@ class_name Enemy
 @export var hp: int = 5
 
 var player_touch = false
+var dead = false
 
 signal enemy1_hit(damage: int)
 
 func hit(damage_number: int):
+	if dead:
+		return
 	hp -= damage_number
 	print(hp)
 	if(hp <= 0):
+		dead = true
 		$AnimationPlayer.stop()
 		$AnimationPlayer.play("dead")
 		await $AnimationPlayer.animation_finished
-		$AnimationPlayer.play("idle")
 		queue_free()
-	$AnimationPlayer.stop()
-	$AnimationPlayer.play("damage_taken")
-	await $AnimationPlayer.animation_finished
-	$AnimationPlayer.play("idle")
+	elif (hp > 0):
+		$AnimationPlayer.stop()
+		$AnimationPlayer.play("damage_taken")
+		await $AnimationPlayer.animation_finished
+		$AnimationPlayer.play("idle")
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

@@ -112,4 +112,5 @@ func _on_button_pressed(button_pressed: Button):
 
 func _on_body_exited(body: Node2D) -> void:
 	i = 0
-	beginning.queue_free()
+	if(beginning != null):
+		beginning.queue_free()
