@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4t8mnprqr5ml"]
+[gd_scene load_steps=4 format=3 uid="uid://c4t8mnprqr5ml"]
 
 [ext_resource type="Script" path="res://dialogue/key_popup.gd" id="1_2cbdu"]
 [ext_resource type="Texture2D" uid="uid://dhhxfl6llxwrv" path="res://assets/border_02_nobackground.png" id="2_kqk4m"]
+[ext_resource type="Script" path="res://dialogue/label.gd" id="3_4iffg"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_2cbdu")
@@ -31,17 +32,17 @@ metadata/_edit_use_anchors_ = true
 [node name="Label" type="Label" parent="TextureRect/ColorRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.146345
-anchor_top = -0.0306426
-anchor_right = -0.146345
-anchor_bottom = -0.0306421
+anchor_left = -0.166765
+anchor_top = -0.0612854
+anchor_right = -0.0917614
+anchor_bottom = -0.0612849
 offset_left = 7.21514
 offset_top = 2.45142
 offset_right = 116.215
 offset_bottom = 25.4514
-scale = Vector2(0.331439, 1.60858)
+scale = Vector2(0.00297079, 0.0436847)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-horizontal_alignment = 1
+script = ExtResource("3_4iffg")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="Duration" to="." method="_on_duration_timeout"]
