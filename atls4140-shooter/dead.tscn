@@ -3,7 +3,10 @@
 [ext_resource type="Script" path="res://dead.gd" id="1_ble7q"]
 [ext_resource type="Texture2D" uid="uid://dinigo6nhe5kb" path="res://assets/startScreen.jpg" id="1_raa8d"]
 [ext_resource type="Texture2D" uid="uid://dhhxfl6llxwrv" path="res://assets/border_02_nobackground.png" id="2_xcs2w"]
-[ext_resource type="Script" path="res://restart_button.gd" id="3_jx6fq"]
+
+[sub_resource type="GDScript" id="GDScript_vj1bm"]
+script/source = "extends Button
+"
 
 [node name="Dead" type="Node2D"]
 script = ExtResource("1_ble7q")
@@ -39,7 +42,7 @@ offset_bottom = 830.431
 scale = Vector2(0.0120616, 0.0404119)
 theme_override_font_sizes/font_size = 600
 text = "Start Over"
-script = ExtResource("3_jx6fq")
+script = SubResource("GDScript_vj1bm")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="TextureRect"]

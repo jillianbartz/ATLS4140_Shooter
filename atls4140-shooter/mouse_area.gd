@@ -11,11 +11,11 @@ var button_text = ""
 var i = 0
 
 var start_chats = [
-	"“Oh, hello there, brave adventurer! \n You startled me! 
-	I wasn’t expecting company down here in these dark, twisty halls.”",
-	"“But tell me, what brings you to this shadowy place?”",
-	"“Ah, I see. \n Well, now that you are here, I have some questions for you...”",
-	"“While you were bravely adventuring, did you notice a stuffed elephant?”"
+	"Oh, hello there, brave adventurer! \n You startled me! 
+	I wasn’t expecting company down here in these dark, twisty halls.",
+	"But tell me, what brings you to this shadowy place?",
+	"Ah, I see. \n Well, now that you are here, I have some questions for you...",
+	"While you were bravely adventuring, did you notice a stuffed elephant?"
 ]
 
 var incorrect_chats = [
